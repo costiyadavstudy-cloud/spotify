@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+.left {
+  width: 28%;
+  height: 90%;
+  border-radius: 3px;
+  background-color: rgb(19, 19, 19);
+  margin: 0px 4px 0px 0px;
+  /* display: flex; */
+  /* justify-content: center; */
+  ;
+  /* flex-wrap: wrap; */
+}
+.right {
+  margin: 0px 0px 0px 4px;
+  border-radius: 3px;
+  width: 71%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1d1d1d 10%, black 90%);
+  
+
+}
+main {
+  /* position: relative; */
+  height: 77%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: black;
+}
+#logo {
+  margin: 0px 0px 0px 28px;
+  height: 33px;
+}
+#home {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  z-index: 1;
+  /* border: 2px solid white;
+    padding: 12px;
+    background-color: red; */
+}
+#home-box::after {
+  display: inline-block;
+  content: "";
+  height: 48px;
+  width: 48px;
+  background-color: rgb(29, 29, 29);
+  position: absolute;
+  border-radius: 50%;
+}
+#home-box {
+    height: 45px;
+  width: 45px;
+  margin: 0px 0px 0px 28px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+header {
+  height: 9%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+#searchBar {
+    margin: 0px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+input{
+    background-color: rgb(29, 29, 29);
+  font-size: 15px;
+  color: white;
+  height: 20px;
+  width: 400px;
+  padding: 7% 0% 0% 72%;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+
+}
+
+#searchSvg{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 17px;
+}
+#browse{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: -143px;
+}
+#searchCustom-PlaceHolder{
+  color: white;
+  position: absolute;
+  left: 46px;
+  color: rgb(155, 155, 155);
+}
+#searchCustom-PlaceHolder:hover{
+  cursor:text;
+}
+.headerLists{
+  list-style: none;
+  color: rgb(155, 155, 155);
+  margin: 5px;
+}
+.headerLists:hover{
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 2px;
+
+
+}
+#listContainer{
+  width: 245px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* justify-content: space-between; */
+
+  
+}
+#other{
+
+  display: flex;
+  align-items: center;
+  height: 29px;
+  width: 683px;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#line {
+  height: 31px;
+  width: 1px;
+  background-color: white;
+  margin: 0px 0px 0px 24px;
+}
+#downArrow{
+  height: 20px;
+  margin: 0px 14px;
+}
+#installApps{
+  height: 29px;
+  width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 0px 28px;
+}
+#signUP{
+  margin: 0px 0px 0px 28px;
+  color: rgb(155, 155, 155);
+  width: 57px;
+
+}
+#logIn{
+  margin: 0px 0px 0px 28px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  padding: 15px 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 44px;
+  border-radius: 27px;
+}
+#youLibrary{
+  width: 98px;
+  display: inline-block;
+  margin: 20px;
+  font-weight: 550;
+  font-size: 15px;  
+}
+#Headings{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#plus{
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+#create{
+  padding: 7px 15px;
+  font-weight: 550;
+  font-size: 13px;  
+  display: inline-block;
+  width: 71px;
+  background-color: rgb(36, 36, 36);
+  border-radius: 20px;
+  margin: 0px 14px;
+
+}
+#createText{
+  margin: 0px 5px;
+}
+#userStart{
+  background: transparent;
+  width: 95%;
+  height: 49%;
+  margin: 26px auto 0px auto;
+  overflow: scroll;
+  scrollbar-width: none;
+  
+}
+.SomeBoxes{
+  background-color: rgb(31, 31, 31);
+  height: 36%;
+  width: 89%;
+  padding: 19px;
+  border-radius: 7px;
+
+  margin: 0px 0px 23px 0px;
+
+}
+
+.userStartText{
+  margin: 0px 0px 7px 0px;
+  font-weight: 550;
+  font-size: 15px;
+  
+}
+.helpText{
+  
+  font-size: 13px;
+  margin: 0px 0px 19px 0px;
+}
+.Btn{
+  background-color: white;
+  color: black;
+  padding: 4px 15px;
+  border-radius: 30px;
+}
+/* <----------------------------------------list----------------------------------> */
+#playListBtn-id{
+  
+  width: 116px;
+}
+#podcastBtn-id{
+  width: 137px;
+}
+#asidePlayer{
+  background-color: transparent;
+  height: auto;
+  width: 92%;
+  margin: 22px auto 0px auto;
+  padding: 5px;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.playerFooter{
+  text-decoration: none;
+  background: #f000;
+  width: auto;
+  padding: 2px 5px;
+  margin: 0px 5px;
+  color: rgb(118, 118, 118);
+  
+}
+#Cookies{
+  text-decoration: none;
+  margin: 0px 20px;
+  font-size: 13px;
+}
+#langSvg{
+  height: 20px;
+  width: 20px;
+  fill: white;
+  /* stroke: white; */
+}
+#language{
+  display: flex;
+  align-items: center;
+  width: 97px;
+  margin: 20px;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 30px;
+}
+#langText{
+  margin: 0px 10px;
+}
+/* <--------------------------------------------right sider------------------------------------> */
+
+#someControls{
+  margin: 21px 0px;
+  display: flex;
+  align-items: center;
+  width: 96%;
+  justify-content: space-between;
+}
+#trendingSongs{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+}
+#rightContent{
+
+  background-color: rgba(63, 138, 138, 0);
+  margin: 5px 0px 0px 4%;
+  height: 95%;
+  width: 96%;
+}
+#showAll{
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(148, 148, 148);
+}
+#trendingSongsList{
+  width: 100%;
+  height: 63%;
+}
+#slide{
+
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x:visible;
+  scrollbar-width: none;
+
+
+}
+.songImage{
+
+  width: 169px;
+  border-radius: 9px;
+  display: inline-block;
+}
+.card{
+
+
+  height: 275px;
+  width: 189px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 15px 15px 15px;
+  border-radius: 5px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  /* overflow: hidden; */
+}
+.blackbg{
+    background: linear-gradient(to top, transparent,black, transparent);
+    display: inline-block;
+    position: absolute;
+    min-height: 270px;
+    width: 196px;
+    border-radius: 5px;
+    z-index: -1;
+  
+}
+.greybg{
+  background: linear-gradient(to top, rgb(20, 20, 20), rgb(29, 29, 29),rgb(31, 31, 31),rgb(31, 31, 31),rgb(42, 42, 42), transparent);
+  display: inline-block;
+  position: absolute;
+  min-height: 270px;
+  width: 196px;
+  opacity: 0;
+  border-radius: 5px;
+  z-index: -1;
+  
+}
+.setbg{
+  animation: setBacground 1s ease  forwards;
+}
+.unsetbg{
+  animation: unsetBacground 1s ease  forwards;
+}
+@keyframes setBacground {
+  from{
+  }
+  to{
+    z-index: -1;
+      opacity: 1;    
+  }
+
+  
+}
+
+@keyframes unsetBacground {
+  from{
+  }
+  to{
+    z-index: -1;
+      opacity: 0;    
+  }
+
+  
+}
+.songNames{
+  margin: 7px 2px;
+  font-size: 14px;
+}
+.songArtists{
+
+  font-size: 12px;
+  color: #959595;
+  
+}
+.triangle{
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid black;
+  border-left: 10px solid transparent;
+  position: absolute;
+  transform: rotate(90deg);
+  right: 12px;
+
+}
+.play{
+  position: absolute;
+  padding: 25px;
+  background: #48b648;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 21px;
+  bottom: 141px;
+  opacity: 0;
+}
+.setAnimateBtn{
+  animation: setPlayBtnTranforms 0.25s ease forwards;
+}
+.unSetAnimateBtn{
+  animation: unSetPlayBtnTranforms 0.25s ease forwards;
+}
+@keyframes setPlayBtnTranforms {
+  from{
+      bottom: 141px;
+      opacity: 0;
+      
+    }
+    to{
+      opacity: 1;
+    bottom: 161px;
+
+  }
+}
+@keyframes unSetPlayBtnTranforms {
+  from{
+      bottom: 161px;
+      opacity: 1;
+      
+    }
+    to{
+      opacity: 0;
+    bottom: 141;
+
+  }
+}
+#player{
+  width: 100%;
+  height: 7%;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#player img{
+  height: 20px;
+  width: 20px;
+}
+.playButton{
+  height: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid white;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+
+}
+.circle{
+  position: relative;
+  background: #338833;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+}
+.audio{
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+.pause{
+  height: 48px !important;
+  width: 48px !important;
+  display: none;
+}

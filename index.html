@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify - Web Player: Music for everyone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="/svg/Spotify_Primary_Logo_RGB_Black.svg" alt="">
+    <div id="home-box">
+      <img id="home" src="/svg/home.svg" alt="">
+    </div>
+    <div id="searchBar">
+      <img id="searchSvg" src="/svg/search-interface-symbol.svg" alt="">
+      <input id="searchBarInput" name="search" type="text" autocomplete="off">
+      <label id="searchCustom-PlaceHolder" for="searchBarInput">What do you want to play?</label>
+      <img id="browse" src="/svg/folder.svg" alt="">
+    </div>
+
+
+    <!-- <----------------------------------search bar completed-------------------------------------->
+    <div id="other">
+      <ul id="listContainer">
+        <li class="headerLists">Premium</li>
+        <li class="headerLists">Support</li>
+        <li class="headerLists">Download</li>
+      </ul>
+      <div id="line"></div>
+      <div id="installApps">
+        <img id="downArrow" src="/svg/downArrow.svg" alt="">
+        <div style="color:rgb(155, 155, 155);;" id="textApps">Install App</div>
+      </div>
+      <div id="signUP">Sign up</div>
+      <div id="logIn">Log in</div>
+    </div>
+    </div>
+  </header>
+  <main>
+    <div class="left">
+      <div id="Headings">
+        <div id="youLibrary">Your Library</div>
+        <div id="create">
+          <img id="plus" src="/svg/close.svg" alt="">
+          <span id="createText">Create</span>
+        </div>
+      </div>
+      <div id="userStart">
+        <div class="SomeBoxes" id="createPlaylist">
+          <div class="userStartText" id="idPlayList">Create your first playlist</div>
+          <div class="helpText" id="idPlayList-two">It's easy, we'll help you</div>
+          <div class="Btn" id="playListBtn-id">Create playlist</div>
+        </div>
+        <div class="SomeBoxes" id="podcast">
+          <div class="userStartText" id="idPodcast">Let's find some podcasts to follow</div>
+          <div class="helpText" id="idPodcast-two">We'll keep you updated on new episodes</div>
+          <div class="Btn" id="podcastBtn-id">Browse podcasts</div>
+        </div>
+      </div>
+      <aside id="asidePlayer">
+        <a class="playerFooter" href="">Legal</a>
+        <a class="playerFooter" href="">Safety & Privacy Center</a>
+        <a class="playerFooter" href="">Privacy Policy</a>
+        <a class="playerFooter" href="">Cookies</a>
+        <a class="playerFooter" href="">About Ads</a>
+        <a class="playerFooter" href="">Accessibility</a>
+
+      </aside>
+      <a id="Cookies" href="">Cookies</a>
+      <span id="language">
+        <span id="langSvg">
+          <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-10180-icon"
+            style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);"
+            viewBox="0 0 16 16">
+            <path
+              d="M8.152 16H8a8 8 0 1 1 .152 0m-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296M4.877 7.25c.062-1.771.34-3.386.773-4.624q.148-.427.329-.806a6.51 6.51 0 0 0-4.436 5.43zm-3.334 1.5a6.51 6.51 0 0 0 4.436 5.43 8 8 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129zm5.048 0c-.061 1.771-.339 3.386-.772 4.624q-.123.353-.268.674a6.5 6.5 0 0 0 4.071-5.298zm3.031-1.5a6.51 6.51 0 0 0-4.071-5.298q.145.322.268.674c.433 1.238.711 2.853.772 4.624z">
+            </path>
+          </svg>
+        </span>
+        <span id="langText">English</span>
+      </span>
+
+    </div>
+    <div class="right">
+      <div id="rightContent">
+        <div id="trendingSongsList">
+          <div id="someControls">
+            <a id="trendingSongs" href="">Trending songs</a>
+            <a id="showAll" href="">Show all</a>
+          </div>
+          <div id="slide"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="player">
+    <img src="/svg/shuffle.svg" alt="">
+    <img src="/svg/back.svg" alt="">
+    <div class="circle">
+      
+      <div class="playButton"></div> 
+    </div>
+    <img class="pause" src="svg/video-pause-button.svg" alt="">
+    <img src="/svg/next.svg" alt="">
+    <img src="/svg/repeat.svg" alt="">
+  </div>
+  <audio class="audio" src=""></audio>
+  <script src="script.js">
+    
+  </script>
+</body>
+
+</html>
