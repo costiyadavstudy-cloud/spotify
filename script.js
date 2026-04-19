@@ -2,6 +2,7 @@ let input = document.getElementById("searchBarInput");
 let label = document.querySelector("label");
 let slide = document.getElementById("slide");
 let address = [
+    "/jpg/top.jpg",
     "/jpg/majboor.jpg",
     "/jpg/choodkar.jpg",
     "/jpg/dheema.jpg",
@@ -15,6 +16,7 @@ let address = [
     "/jpg/bheegi.jpg"
 ];
 let songNames = [
+    'On Top',
     'majboor',
     'Abhi Na Jao Chhod Kar',
     'Dheema (From "Love Insurance Kompany")',
@@ -29,6 +31,7 @@ let songNames = [
 
 ];
 let songs = [
+    'songs/top.mp3',
     'songs/majboor.mp3',
     'songs/abhi.mp3',
     'songs/dheema.mp3',
@@ -43,6 +46,7 @@ let songs = [
 
 ];
 let songArtists = [
+    'Karan Aujla',
     'Sheheryar Rehan, Zoha Waseem',
     'Asha Bhosle, Mohammed Rafi',
     'Anirudh Ravichander, Vignesh Shivan',
@@ -105,6 +109,8 @@ let play = document.getElementsByClassName("play");
 let circle = document.getElementsByClassName("circle");
 let pause = document.getElementsByClassName("pause");
 let audio = document.getElementsByClassName("audio");
+let next = document.getElementsByClassName("next");
+let back = document.getElementsByClassName("back");
 
 for (let i = 0; i < address.length; i++) {
     new createCard(address[i], songNames[i], songArtists[i]);
@@ -136,8 +142,19 @@ for (let i = 0; i < card.length; i++) {
     });
     
 }
+    next[0].addEventListener("mouseenter", () => {
+        next[0].style.cursor = "pointer";
+        event.stopPropagation();
+    });
+  
+    back[0].addEventListener("mouseleave", () => {
+        back[0].style.cursor = "pointer";
+        event.stopPropagation();
+    });
+let index;
 for (let i = 0; i < card.length; i++) {
-    play[i].addEventListener("click", () => {
+    card[i].addEventListener("click", () => {
+        index = i;
         console.log(songs[i])
         audio[0].src = songs[i]
         audio[0].play();
@@ -146,15 +163,38 @@ for (let i = 0; i < card.length; i++) {
         pause[0].style.display = 'block';   
     });
     
-    pause[0].addEventListener("click", () => {
-        audio[0].pause();
-        console.log('hello')
-        circle[0].style.display = 'block';
-        pause[0].style.display = 'none';   
-    });
-    circle[0].addEventListener('click',()=>{
-        audio[0].play()
-        pause[0].style.display = 'block';   
-        circle[0].style.display = 'none';
-    })
 }
+pause[0].addEventListener("click", () => {
+    audio[0].pause();
+    console.log('hello')
+    circle[0].style.display = 'block';
+    pause[0].style.display = 'none';   
+});
+circle[0].addEventListener('click',()=>{
+    audio[0].play()
+    pause[0].style.display = 'block';   
+    circle[0].style.display = 'none';
+})
+next[0].addEventListener("click", () => {
+    audio[0].src = songs[index + 1]
+    audio[0].play();
+    index++;
+    circle[0].style.display = 'none';
+    pause[0].style.display = 'block';   
+});
+next[0].addEventListener("click", () => {
+    audio[0].src = songs[index + 1]
+    audio[0].play();
+    index++;
+    circle[0].style.display = 'none';
+    pause[0].style.display = 'block';   
+});
+back[0].addEventListener("click", () => {
+    if (index >= 0) {
+        audio[0].src = songs[index - 1]
+        audio[0].play();
+        index--;
+        circle[0].style.display = 'none';
+        pause[0].style.display = 'block';   
+    }
+});
