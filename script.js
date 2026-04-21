@@ -1,6 +1,30 @@
+
+// <----------------------------------------------------------------declaration-------------------------------------------------------------------------------->
+
+// <------className---------->
+
+
+let card = document.getElementsByClassName("card");
+let blackbg = document.getElementsByClassName("blackbg");
+let greybg = document.getElementsByClassName("greybg");
+let play = document.getElementsByClassName("play");
+let pause = document.getElementsByClassName("pause");
+let audio = document.getElementsByClassName("audio");
+let next = document.getElementsByClassName("next");
+let playButton = document.getElementsByClassName("playButton");
+let back = document.getElementsByClassName("back");
+let imgPlay = document.getElementsByClassName("imgPlay");
+
+// imgPlay[0].display = none
+
+
+// <------id or querry selector---------->
+
 let input = document.getElementById("searchBarInput");
 let label = document.querySelector("label");
 let slide = document.getElementById("slide");
+
+// < ----------------------------------- Arrays ----------------------------------------------------------------- >
 let address = [
     "/jpg/top.jpg",
     "/jpg/majboor.jpg",
@@ -60,19 +84,8 @@ let songArtists = [
     'A. R. Ameen, A.R. Rahman, Jasleen Royal'
 
 ];
-// let searchBar = document.getElementById("searchBar");
-input.addEventListener("focus", () => {
 
-    label.style.display = "none";
-    input.style.border = "2px solid white";
-});
-input.addEventListener("blur", () => {
-    input.style.border = "none";
-    if (input.innerText === '') {
-        label.style.display = "block";
-
-    }
-});
+// < ------------------------------------------------------------------ card creating function ----------------------------------------------------->
 
 function createCard(pictureAdress, songName, songArtist) {
     let play = document.createElement("div");
@@ -102,32 +115,39 @@ function createCard(pictureAdress, songName, songArtist) {
     slide.appendChild(card);
 }
 
-let card = document.getElementsByClassName("card");
-let blackbg = document.getElementsByClassName("blackbg");
-let greybg = document.getElementsByClassName("greybg");
-let play = document.getElementsByClassName("play");
-let circle = document.getElementsByClassName("circle");
-let pause = document.getElementsByClassName("pause");
-let audio = document.getElementsByClassName("audio");
-let next = document.getElementsByClassName("next");
-let back = document.getElementsByClassName("back");
 
 for (let i = 0; i < address.length; i++) {
     new createCard(address[i], songNames[i], songArtists[i]);
     
 }
+
+// <------------------------------------event listener--------------------------------------->
+
+
+input.addEventListener("focus", () => {
+
+    label.style.display = "none";
+    input.style.border = "2px solid white";
+});
+input.addEventListener("blur", () => {
+    input.style.border = "none";
+    if (input.innerText === '') {
+        label.style.display = "block";
+    }
+});
+
+
 for (let i = 0; i < card.length; i++) {
     slide.children[i].addEventListener("mouseenter", () => {
         greybg[i].style.cursor = "pointer";
         event.stopPropagation();
         blackbg[i].style.opacity = '0';
         card[i].style.cursor = "pointer";
-
+        
         play[i].classList.remove('unSetAnimateBtn')
         play[i].classList.add('setAnimateBtn')
         greybg[i].classList.remove("unsetbg");
         greybg[i].classList.add("setbg")
-        // card[0]::before.classList.add("animation");
         
     });
     card[i].addEventListener("mouseleave", () => {
@@ -137,42 +157,51 @@ for (let i = 0; i < card.length; i++) {
         play[i].classList.add('unSetAnimateBtn')
         greybg[i].classList.add("unsetbg");
         blackbg[i].classList.add("setbg");
-        // greybg[i].classList.remove("setbg");
         
     });
     
 }
-    next[0].addEventListener("mouseenter", () => {
+next[0].addEventListener("mouseenter", () => {
         next[0].style.cursor = "pointer";
         event.stopPropagation();
     });
   
-    back[0].addEventListener("mouseleave", () => {
+    back[0].addEventListener("mouseenter", () => {
         back[0].style.cursor = "pointer";
         event.stopPropagation();
     });
-let index;
-for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener("click", () => {
-        index = i;
+    playButton[0].addEventListener("mouseenter", () => {
+        playButton[0].style.cursor = "pointer";
+        event.stopPropagation();
+    });
+    let index;
+    for (let i = 0; i < card.length; i++) {
+        card[i].addEventListener("click", () => {
+            index = i;
         console.log(songs[i])
         audio[0].src = songs[i]
         audio[0].play();
         console.log('hello')
-        circle[0].style.display = 'none';
+        imgPlay[0].style.display = 'none';
+        playButton[0].style.display = 'none';
         pause[0].style.display = 'block';   
+        
+        
+        
     });
     
 }
 pause[0].addEventListener("click", () => {
     audio[0].pause();
     console.log('hello')
-    circle[0].style.display = 'block';
+    imgPlay[0].style.display = 'block';
+    playButton[0].style.display = 'block';
     pause[0].style.display = 'none';   
 });
-circle[0].addEventListener('click',()=>{
+playButton[0].addEventListener('click',()=>{
     audio[0].play()
     pause[0].style.display = 'block';   
+    playButton[0].style.display = 'none';
     circle[0].style.display = 'none';
 })
 next[0].addEventListener("click", () => {
@@ -182,13 +211,7 @@ next[0].addEventListener("click", () => {
     circle[0].style.display = 'none';
     pause[0].style.display = 'block';   
 });
-next[0].addEventListener("click", () => {
-    audio[0].src = songs[index + 1]
-    audio[0].play();
-    index++;
-    circle[0].style.display = 'none';
-    pause[0].style.display = 'block';   
-});
+
 back[0].addEventListener("click", () => {
     if (index >= 0) {
         audio[0].src = songs[index - 1]

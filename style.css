@@ -82,7 +82,7 @@ header {
     align-items: center;
     position: relative;
 }
-input{
+#searchBarInput{
     background-color: rgb(29, 29, 29);
   font-size: 15px;
   color: white;
@@ -482,39 +482,22 @@ input{
 
   }
 }
-#player{
-  width: 100%;
-  height: 7%;
-  background-color: rgb(29, 28, 28);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
 #player img{
   height: 20px;
   width: 20px;
 }
 .playButton{
-  height: 0px;
-  height: 0px;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 20px solid white;
-  transform: rotate(90deg);
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-
-}
-.circle{
   position: relative;
   background: #338833;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
+
 .audio{
   visibility: hidden;
   width: 0px;
@@ -524,4 +507,29 @@ input{
   height: 48px !important;
   width: 48px !important;
   display: none;
+}
+#player{
+  width: 100%;
+  height: 14%;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+#slider{
+  width: 10px;
+}
+#btncontrols{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.imgPlay{
+  bottom: 15px;
+  left: 17px;
+  position: absolute;
+
 }
